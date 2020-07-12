@@ -11,7 +11,9 @@ df -h
 cp -rf /var/lib/docker-backup/* /var/lib/docker
 systemctl start docker
 ```
-
+## Reference
+- https://linuxhint.com/ramdisk_ubuntu_1804/
+-https://medium.com/clusterfk/use-a-different-volume-for-your-docker-images-in-ubuntu-4c0315be6d66
 # dockerRAM
 Installs the docker snap in a tmpfs RAM-Disk and provides utility for that
 
