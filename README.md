@@ -6,7 +6,8 @@ mv /var/lib/docker /var/lib/docker-backup
 sudo mkdir /var/lib/docker
 #This creates 16GB RAMDisk by default
 mount tmpfs /var/lib/docker -t tmpfs -o defaults,noatime,mode=1700
-
+# Check disk created
+df -h
 cp -rf /var/lib/docker-backup/* /var/lib/docker
 systemctl start docker
 ```
