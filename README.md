@@ -1,3 +1,16 @@
+# Summary Steps
+```
+#Assume docker already installed, files saved @ /var/lib/docker
+systemctl stop docker
+mv /var/lib/docker /var/lib/docker-backup
+sudo mkdir
+#This creates 16GB RAMDisk by default
+mount tmpfs /var/lib/docker -t tmpfs -o defaults,noatime,mode=1700
+
+cp -rf /var/lib/docker-backup/* /var/lib/docker
+systemctl start docker
+```
+
 # dockerRAM
 Installs the docker snap in a tmpfs RAM-Disk and provides utility for that
 
