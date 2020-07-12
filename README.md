@@ -3,7 +3,7 @@
 #Assume docker already installed, files saved @ /var/lib/docker
 systemctl stop docker
 mv /var/lib/docker /var/lib/docker-backup
-sudo mkdir
+sudo mkdir /var/lib/docker
 #This creates 16GB RAMDisk by default
 mount tmpfs /var/lib/docker -t tmpfs -o defaults,noatime,mode=1700
 
